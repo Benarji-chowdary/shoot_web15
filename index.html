@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLASHOOT - Quick Content Service</title>
+    <meta name="description"
+        content="World's first quick content service. We shoot, edit, and deliver reels in 10 minutes.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">FLASHOOT</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero" class="nav-icon active">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </a>
+                <a href="#bestsellers" class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-outline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                    Get the App
+                </button>
+                <button class="btn-primary" onclick="openBookingModal('General Query')">Contact Us</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="section hero">
+            <div class="container hero-content">
+                <div class="hero-text-container">
+                    <p class="hero-subtitle">WORLD'S FIRST QUICK CONTENT SERVICE</p>
+                    <h1 class="hero-title">We Shoot • Edit • Deliver Reels in</h1>
+                    <div class="hero-highlight">
+                        <span>10</span> Minutes*
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <div class="glow-effect"></div>
+                    <img src="assets/hero_mockup.png" alt="Flashoot App Mockup showing quick reel delivery"
+                        class="hero-iphone" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Bestsellers Section -->
+        <section id="bestsellers" class="section bestsellers">
+            <div class="container">
+                <h2 class="section-title">Bestsellers</h2>
+
+                <div class="cards-grid">
+                    <!-- Hourly Plan -->
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Hourly <span>Plan</span></h3>
+                            <span class="badge red">Quickest Content</span>
+                            <p class="desc">Perfect for anyone who want a single, fast, high-quality reel.</p>
+                        </div>
+                        <div class="price">
+                            <span class="currency">₹</span>1,999
+                            <span class="suffix">+ GST</span>
+                        </div>
+                        <div class="included-header">WHAT'S INCLUDED</div>
+                        <ul class="features-list">
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> 1 Hour Shoot</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> 1 Edited Reel Delivered</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> Shot on Latest iPhone</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> Fast Delivery (10 mins post shoot)</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> Trained and Certified Reel Maker</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> Flashoot Branding Included</li>
+                        </ul>
+                        <button class="btn-primary full-width mt-auto" onclick="openBookingModal('Hourly Plan')">
+                            ₹ Book Now &rarr;
+                        </button>
+                    </div>
+
+                    <!-- Half-Day Plan -->
+                    <div class="pricing-card popular pt-badge">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <div class="card-header">
+                            <h3>Half-Day <span>Plan</span></h3>
+                            <span class="badge yellow">Event Essential</span>
+                            <p class="desc">Ideal for events and creators who need more time and more content.</p>
+                        </div>
+                        <div class="price">
+                            <span class="currency">₹</span>4,999
+                            <span class="suffix">+ GST</span>
+                        </div>
+                        <div class="included-header">WHAT'S INCLUDED</div>
+                        <ul class="features-list">
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> Up to 3 Hours Shoot</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> 2 Edited reels</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> Shot on Latest iPhone</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> Fast Delivery (10 mins post shoot)</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> Trained and Certified Reel Maker</li>
+                            <li><svg viewBox="0 0 24 24">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg> Flashoot Branding Included</li>
+                        </ul>
+                        <button class="btn-primary full-width mt-auto" onclick="openBookingModal('Half-Day Plan')">
+                            ₹ Book Now &rarr;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perfect Plan Section -->
+        <section id="perfect-plan" class="section perfect-plan">
+            <div class="container text-center">
+                <h2 class="section-title">Choose Your <span>Perfect Plan</span></h2>
+                <p class="section-subtitle">Professional content creation services tailored to your needs</p>
+
+                <div class="cards-grid split-grid">
+                    <!-- Wedding Packages -->
+                    <div class="plan-card">
+                        <div class="plan-card-body">
+                            <span class="pre-title">FOR YOUR SPECIAL DAY</span>
+                            <h3>Wedding Packages</h3>
+                            <p class="plan-desc">Professional coverage for your wedding celebrations, specializing in
+                                traditional and modern Indian ceremonies with elegant, timeless captures.</p>
+
+                            <div class="starting-price">
+                                <span>Starting from</span>
+                                <div class="amount">₹14,999<small>/package</small></div>
+                            </div>
+
+                            <div class="tiers-preview">
+                                <div class="tier">
+                                    <span>SINGLE EVENT</span>
+                                    <strong>Basic</strong>
+                                </div>
+                                <div class="tier">
+                                    <span>THREE EVENTS</span>
+                                    <strong>Silver</strong>
+                                </div>
+                                <div class="tier">
+                                    <span>FOUR EVENTS</span>
+                                    <strong>Gold</strong>
+                                </div>
+                                <div class="tier">
+                                    <span>COMPLETE WEDDING</span>
+                                    <strong>Platinum</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="plan-card-footer">
+                            <button class="btn-primary glow-btn" onclick="openWeddingModal()">
+                                Know More &rarr;
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Business Packages -->
+                    <div class="plan-card right-card">
+                        <div class="plan-card-body">
+                            <span class="pre-title">FOR BUSINESS AND BRANDS</span>
+                            <h3>Business</h3>
+                            <p class="plan-desc">Professional coverage for your business events, delivering polished
+                                content that aligns with your brand identity and marketing goals.</p>
+
+                            <div class="pricing-label">Customised Pricing <small>+GST</small></div>
+
+                            <div class="package-inclusions">
+                                <h4>Package Inclusions:</h4>
+                                <ul class="features-list grid-list">
+                                    <li>Cinematic visuals for premium brands & events</li>
+                                    <li>Refined, brand-aligned storytelling</li>
+                                    <li>Professional production with expert direction</li>
+                                    <li>Hassle-free booking & coordination</li>
+                                    <li>Quick turnaround Cut. Polish. Launch</li>
+                                    <li>Ideal for campaigns, launches & brand showcases</li>
+                                    <li>Elevate your brand with polished visual storytelling</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="plan-card-footer">
+                            <button class="btn-primary glow-btn" onclick="openBookingModal('Business Package')">
+                                Book Now &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="close-btn" onclick="closeBookingModal()">&times;</button>
+            <div class="modal-header">
+                <h3>Submit Enquiry</h3>
+                <p>Selected Package: <strong id="selectedPackageText">None</strong></p>
+            </div>
+            <!-- Form Action to Python Flask backend -->
+            <form id="enquiryForm" class="booking-form">
+                <input type="hidden" name="Package" id="formPackageName" value="">
+
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="Full Name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label>Contact Number *</label>
+                    <div class="phone-input">
+                        <select name="Country Code" class="country-code">
+                            <option value="+91">IN +91</option>
+                            <option value="+1">US +1</option>
+                            <option value="+44">UK +44</option>
+                        </select>
+                        <input type="tel" name="Phone Number" required placeholder="Enter phone number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" name="Email" required placeholder="Enter email address">
+                </div>
+
+                <div class="form-group">
+                    <label>Occasion *</label>
+                    <select name="Occasion" required>
+                        <option value="" disabled selected>Select occasion</option>
+                        <option value="Wedding">Wedding</option>
+                        <option value="Birthday">Birthday</option>
+                        <option value="Corporate Event">Corporate Event</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>City *</label>
+                    <select name="City" required>
+                        <option value="" disabled selected>Select city</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Date of the occasion *</label>
+                    <input type="date" name="Date" required>
+                </div>
+
+                <button type="submit" class="btn-submit full-width">Submit Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Wedding Modal (Fullscreen) -->
+    <div id="weddingModal" class="modal-overlay full-screen-modal">
+        <div class="wedding-modal-content">
+            <button class="close-btn" onclick="closeWeddingModal()">&times;</button>
+            <div class="wedding-header">
+                <h2>Capture Your Wedding <span>Memories</span></h2>
+                <p>Professional wedding reel services to preserve your special moments forever</p>
+                <div class="features-row">
+                    <div class="feat-box">
+                        <div class="icon-wrap">📷</div> Professional Team
+                    </div>
+                    <div class="feat-box">
+                        <div class="icon-wrap">⏱️</div> Same Day Edits
+                    </div>
+                    <div class="feat-box">
+                        <div class="icon-wrap">⭐</div> Premium Quality
+                    </div>
+                    <div class="feat-box">
+                        <div class="icon-wrap">❤️</div> Candid Moments
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-grid wedding-grid">
+                <!-- Basic -->
+                <div class="pricing-card align-top">
+                    <div class="card-header">
+                        <span class="pre-title">SINGLE EVENT</span>
+                        <h3>Basic</h3>
+                        <p class="desc">Perfect for couples looking for a stunning, professionally crafted wedding shoot
+                            that won't break the bank.</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">₹</span>14,999
+                        <span class="suffix">+ GST</span>
+                    </div>
+                    <div class="included-header">Package Inclusions:</div>
+                    <ul class="features-list">
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Covers up to one event</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Include 3 Reels</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Shot on iPhone</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Instant reel delivery.</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Complementary Pictures</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Please provide an SD card to receive all raw content if needed.</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Flashoot Logo Mandatory</li>
+                    </ul>
+                    <button class="btn-primary full-width mt-auto"
+                        onclick="openBookingFromWedding('Wedding - Basic (₹14,999)')">
+                        Enquire Now &rarr;
+                    </button>
+                </div>
+
+                <!-- Silver -->
+                <div class="pricing-card align-top">
+                    <div class="card-header">
+                        <span class="pre-title">THREE EVENTS</span>
+                        <h3>Silver</h3>
+                        <p class="desc">Perfect for those who want comprehensive coverage with an extra touch of
+                            elegance.</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">₹</span>44,999
+                        <span class="suffix">+ GST</span>
+                    </div>
+                    <div class="included-header">Package Inclusions:</div>
+                    <ul class="features-list">
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Covers up to three events</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Include 10 Reels</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Shot on iPhone</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Instant reel delivery.</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Complementary Pictures</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Please provide an SD card to receive all raw content.</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Flashoot Logo Mandatory</li>
+                    </ul>
+                    <button class="btn-primary full-width mt-auto"
+                        onclick="openBookingFromWedding('Wedding - Silver (₹44,999)')">
+                        Enquire Now &rarr;
+                    </button>
+                </div>
+
+                <!-- Gold -->
+                <div class="pricing-card popular pt-badge align-top">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="card-header">
+                        <span class="pre-title">FOUR EVENTS</span>
+                        <h3>Gold</h3>
+                        <p class="desc">Perfect for those who want comprehensive coverage with an extra touch of
+                            elegance.</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">₹</span>59,999
+                        <span class="suffix">+ GST</span>
+                    </div>
+                    <div class="included-header">Package Inclusions:</div>
+                    <ul class="features-list">
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Covers up to four events</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Include 15 Reels</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Shot on iPhone</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Instant reel delivery.</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Complementary Pictures</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Please provide an SD card to receive all raw content.</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Flashoot Logo Mandatory</li>
+                    </ul>
+                    <button class="btn-primary full-width mt-auto"
+                        onclick="openBookingFromWedding('Wedding - Gold (₹59,999)')">
+                        Enquire Now &rarr;
+                    </button>
+                </div>
+
+                <!-- Platinum -->
+                <div class="pricing-card align-top">
+                    <div class="card-header">
+                        <span class="pre-title">COMPLETE WEDDING</span>
+                        <h3>Platinum</h3>
+                        <p class="desc">For couples who want it all—every moment captured with unmatched attention to
+                            detail.</p>
+                    </div>
+                    <div class="price">
+                        <span class="currency">₹</span>99,999
+                        <span class="suffix">+ GST</span>
+                    </div>
+                    <div class="included-header">Package Inclusions:</div>
+                    <ul class="features-list">
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Covers whole wedding events</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Include 25 Reels</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Shot on iPhone</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Instant reel delivery.</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Interaction videos with complimentary mobile portraits</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Please provide an SD card...</li>
+                        <li><svg viewBox="0 0 24 24">
+                                <path d="M20 6L9 17l-5-5" />
+                            </svg> Flashoot Logo Mandatory</li>
+                    </ul>
+                    <button class="btn-primary full-width mt-auto"
+                        onclick="openBookingFromWedding('Wedding - Platinum (₹99,999)')">
+                        Enquire Now &rarr;
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
